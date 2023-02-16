@@ -1,7 +1,7 @@
-import React, { useMemo, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import Header from '../Components/Header'
-import '../CSS/addToken.css'
+import React, { useMemo, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Header from '../Components/Header';
+import '../CSS/addToken.css';
 
 function AddToken() {
   const navigate = useNavigate();
@@ -12,10 +12,10 @@ function AddToken() {
 
   useMemo(() => {
     if (token.length > 0 && balance.length > 0) {
-      setIsDisabled(false)
+      setIsDisabled(false);
     } else {
-      setIsDisabled(true)
-    }
+      setIsDisabled(true);
+    };
 
   }, [token, balance])
 
@@ -24,7 +24,15 @@ function AddToken() {
     tokenForLocalStorage.push({ tok: token, bal: balance });
     localStorage.setItem('tokens', JSON.stringify(tokenForLocalStorage));
     navigate('/');
-  }
+  };
+
+  const handleChange = ({ target }) => {
+    const targetValue = target.value;
+    const regex = /^[0-9.,]+$/;
+    const regexValidation =  targetValue.length === 0 ? true : regex.test(targetValue);
+    const maxLengthBalance = 12;
+    if (regexValidation && targetValue.length < maxLengthBalance) setBalance(targetValue);
+  };
 
   const verifyDuplicateToken = () => {
     const tokenStorage = JSON.parse(localStorage.getItem('tokens') || '[]');
@@ -33,8 +41,8 @@ function AddToken() {
       alert('This token already exists, choose another name please.');
     } else {
       handleClickSave()
-    }
-  }
+    };
+  };
 
   return (
     <div>
@@ -60,18 +68,21 @@ function AddToken() {
               value={ token }
               placeholder="Token Name"
               onChange={ ({ target }) => setToken(target.value.toLocaleUpperCase()) }
+              maxLength="6"
               required
             />
           </label>
           <label htmlFor="balance-input">
             Balance
             <input
-              type="number"
+              type="text"
               name="balance"
               id="balance-input"
               value={ balance }
               placeholder="Value"
-              onChange={ ({ target }) => setBalance(target.value) }
+              onChange={ handleChange }
+              min="1"
+              max="5"
               required
             />
           </label>
@@ -89,4 +100,4 @@ function AddToken() {
   )
 }
 
-export default AddToken
+export default AddToken;
