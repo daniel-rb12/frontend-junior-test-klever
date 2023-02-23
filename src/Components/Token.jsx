@@ -4,15 +4,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useNavigate } from 'react-router-dom';
 import '../CSS/token.css'
 
-function Token({ token, balance }) {
+function Token({ token, balance, ind }) {
   const navigate = useNavigate();
+    
+  const saveIndexAndRedirect = (index) => {
+    localStorage.setItem('index', JSON.stringify(index));
+    navigate('/edit-token');
+  };
+
   return (
     <div className="token-component-container">
       <div className='name-and-edit-container'>
         <button
           id="edit-icon-button"
           type="button"
-          onClick={ () => navigate('/edit-token') }
+          onClick={ () => saveIndexAndRedirect(ind) }
         >
           <FontAwesomeIcon id="search-icon" icon={ faPenToSquare } />
         </button>
