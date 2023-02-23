@@ -46,6 +46,13 @@ function EditToken() {
     };
   };
 
+  const removeToken = () => {
+    const filterToken = tokenStorage.filter((token) => (
+      token.tok !== tokenStorage[indexToken].tok));
+    localStorage.setItem('tokens', JSON.stringify(filterToken));
+    navigate('/')
+  }
+
   return (
     <div>
       <Header />
@@ -93,6 +100,13 @@ function EditToken() {
             disabled={ isDisabled }
           >
             Save
+          </button>
+          <button
+            id="remove-button"
+            type="button"
+            onClick={ removeToken }
+          >
+            Remove
           </button>
         </form>
       </div>
