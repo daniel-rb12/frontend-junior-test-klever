@@ -5,8 +5,11 @@ import Header from '../Components/Header'
 function EditToken() {
   const navigate = useNavigate();
 
-  const [token, setToken] = useState('');
-  const [balance, setBalance] = useState('');
+  const indexToken = JSON.parse(localStorage.getItem('index'));
+  const tokenStorage = JSON.parse(localStorage.getItem('tokens') || '[]');
+
+  const [token, setToken] = useState(tokenStorage[indexToken].tok);
+  const [balance, setBalance] = useState(tokenStorage[indexToken].bal);
   const [isDisabled, setIsDisabled] = useState(true);
 
   useMemo(() => {
@@ -20,7 +23,7 @@ function EditToken() {
 
   const handleClickSave = () => {
     const tokenForLocalStorage = JSON.parse(localStorage.getItem('tokens') || '[]');
-    tokenForLocalStorage.push({ tok: token, bal: balance });
+    tokenForLocalStorage[indexToken] = ({ tok: token, bal: balance });
     localStorage.setItem('tokens', JSON.stringify(tokenForLocalStorage));
     navigate('/');
   };
