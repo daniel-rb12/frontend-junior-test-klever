@@ -39,7 +39,10 @@ function EditToken() {
   const verifyDuplicateToken = () => {
     const tokenStorage = JSON.parse(localStorage.getItem('tokens') || '[]');
     const isDuplicate = tokenStorage.find(({ tok }) => tok === token) ? true : false;
-    if (isDuplicate === true) {
+    const isDuplicateEdit = tokenStorage[indexToken].tok === token;
+
+    if (isDuplicateEdit) handleClickSave()
+    else if (isDuplicate === true) {
       alert('This token already exists, choose another name please.');
     } else {
       handleClickSave()
