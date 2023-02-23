@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Header from '../Components/Header'
+import '../CSS/editToken.css'
 
 function EditToken() {
   const navigate = useNavigate();
@@ -64,16 +65,18 @@ function EditToken() {
   return (
     <div>
       <Header />
-      <div className="add-top-container">
-        <span id="edit-span">Edit Token</span>
-        <button
-          id="back-button"
-          type="button"
-          onClick={ () => navigate('/') }
-        >
-          Back
-        </button>
-        <form className="add-form-container">
+      <div className="edit-token-container">
+        <div className="edit-top-container">
+          <span id="edit-span">Edit Token</span>
+          <button
+            id="back-button"
+            type="button"
+            onClick={ () => navigate('/') }
+          >
+            Back
+          </button>
+        </div>
+        <form className="edit-form-container">
           <label htmlFor="token-input">
             Token
             <input
@@ -101,21 +104,23 @@ function EditToken() {
               required
             />
           </label>
-          <button
-            id="save-button"
-            type="button"
-            onClick={ verifyDuplicateToken }
-            disabled={ isDisabled }
-          >
-            Save
-          </button>
-          <button
-            id="remove-button"
-            type="button"
-            onClick={ removeAlert }
-          >
-            Remove
-          </button>
+          <div className="button-container">
+            <button
+              id="save-button-edit"
+              type="button"
+              onClick={ verifyDuplicateToken }
+              disabled={ isDisabled }
+            >
+              Save
+            </button>
+            <button
+              id="remove-button"
+              type="button"
+              onClick={ removeAlert }
+            >
+              Remove
+            </button>
+          </div>
         </form>
       </div>
     </div>
