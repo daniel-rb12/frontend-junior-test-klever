@@ -14,11 +14,12 @@ function Home() {
         <span id="balance-span">Balance</span>
       </div>
       <div className='token-container'>
-        { tokenStorage && tokenStorage.map((token, index) =>(
+        { tokenStorage && tokenStorage.map((token, index) => (
           <Token
+            key={ index }
             token={ token.tok }
             balance={ token.bal }
-            key={ index }
+            ind={ index }
           />
         )) }
       </div>
