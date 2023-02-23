@@ -56,6 +56,11 @@ function EditToken() {
     navigate('/')
   }
 
+  const removeAlert = () => {
+    const teste = window.confirm('The current token will be removed, do you want to continue?')
+    if (teste) removeToken();
+  }
+
   return (
     <div>
       <Header />
@@ -107,7 +112,7 @@ function EditToken() {
           <button
             id="remove-button"
             type="button"
-            onClick={ removeToken }
+            onClick={ removeAlert }
           >
             Remove
           </button>
