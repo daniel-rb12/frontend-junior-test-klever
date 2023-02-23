@@ -84,7 +84,7 @@ label {
   width: 105px;
 }
 
-#save-button-edit:hover {
+#save-button-edit:hover:enabled {
   cursor: pointer;
   background-color: rgb(190, 37, 204);
   color: white;

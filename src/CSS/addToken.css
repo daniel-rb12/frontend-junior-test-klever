@@ -85,7 +85,7 @@ label {
   margin-left: 300px;
 }
 
-#save-button:hover {
+#save-button:hover:enabled {
   cursor: pointer;
   background-color: rgb(190, 37, 204);
   color: white;
