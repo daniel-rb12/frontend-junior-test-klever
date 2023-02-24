@@ -20,7 +20,7 @@ function EditToken() {
       setIsDisabled(true);
     };
 
-  }, [token, balance])
+  }, [token, balance]);
 
   const handleClickSave = () => {
     const tokenForLocalStorage = JSON.parse(localStorage.getItem('tokens') || '[]');
@@ -54,11 +54,11 @@ function EditToken() {
     const filterToken = tokenStorage.filter((token) => (
       token.tok !== tokenStorage[indexToken].tok));
     localStorage.setItem('tokens', JSON.stringify(filterToken));
-    navigate('/')
-  }
+    navigate('/');
+  };
 
   const removeAlert = () => {
-    const teste = window.confirm('The current token will be removed, do you want to continue?')
+    const teste = window.confirm('The current token will be removed, do you want to continue?');
     if (teste) removeToken();
   }
 
@@ -127,4 +127,4 @@ function EditToken() {
   )
 }
 
-export default EditToken
+export default EditToken;

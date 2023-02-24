@@ -16,11 +16,15 @@ function Token({ token, balance, ind }) {
     <div className="token-component-container">
       <div className='name-and-edit-container'>
         <button
+          data-testid={ `icon${ ind }` }
           id="edit-icon-button"
           type="button"
           onClick={ () => saveIndexAndRedirect(ind) }
         >
-          <FontAwesomeIcon id="search-icon" icon={ faPenToSquare } />
+          <FontAwesomeIcon
+            id="search-icon"
+            icon={ faPenToSquare } 
+          />
         </button>
         <span id="token-name">{ token }</span>
       </div>
