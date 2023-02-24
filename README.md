@@ -29,6 +29,7 @@ mkdir nome_do_diretório
 ```
 cd projetos
 git clone git@github.com:daniel-rb12/frontend-junior-test-klever.git
+```
 
 * 3- Entre no diretório clonado e instale as dependências do projeto utilizando seu gerenciador de pacotes
 (se você utiliza o npm o comando é o **npm install**):
@@ -48,5 +49,7 @@ E pronto, agora você consegue visualizar o projeto rodando localmente em sua re
 * E-mail: _daniel.ribeiro012@hotmail.com_
 
 #### Comentários
-O arquivo README_PT.md e os diretórios assets e screens foram desenvolvidos pela [Klever](https://klever.io/en).
+O arquivo README_PT.md e os diretórios assets e screens foram 
+desenvolvidos pela [Klever](https://klever.io/en).
+
 Não foi trabalhada a responsividade para todos os dispositivos neste projeto.
