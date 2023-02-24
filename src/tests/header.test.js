@@ -26,7 +26,7 @@ describe('Test Header component', () => {
   });
 
   test(`Tests if the header element appears in all routes
-    and the targeting of the add token button`, async () => {
+    and the targeting of the add token button`, () => {
     const history = createMemoryHistory();
     render(
       <MemoryRouter initialEntries={['/']}>

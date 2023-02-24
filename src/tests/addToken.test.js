@@ -28,7 +28,7 @@ describe('Test Add Token page', () => {
     global.fetch.mockClear();
   });
 
-  it('tests whether all elements are on the screen', async () => {
+  it('tests whether all elements are on the screen', () => {
     render(
       <MemoryRouter initialEntries={['/add-token']}>
         <Routes>
@@ -50,7 +50,7 @@ describe('Test Add Token page', () => {
     expect(saveButton).toBeInTheDocument();
   });
 
-  it('tests the back button', async () => {
+  it('tests the back button', () => {
     const history = createMemoryHistory();
     render(
       <MemoryRouter initialEntries={['/add-token']}>
@@ -69,7 +69,7 @@ describe('Test Add Token page', () => {
   });
 
   it(`tests the save button and if it only enables
-    it when you fill in all the fields`, async () => {
+    it when you fill in all the fields`, () => {
     const history = createMemoryHistory();
     render(
       <MemoryRouter initialEntries={['/add-token']}>
@@ -105,7 +105,7 @@ describe('Test Add Token page', () => {
     expect(history.location.pathname).toBe("/");
   });
   it(`tests whether the user receives an alert when 
-    trying to add a token with an existing name`, async () => {
+    trying to add a token with an existing name`, () => {
   render(
     <MemoryRouter initialEntries={['/add-token']}>
       <Routes>
@@ -129,7 +129,7 @@ describe('Test Add Token page', () => {
     ' choose another name please.');
   });
 
-  it(`tests regex validator`, async () => {
+  it(`tests regex validator`, () => {
     render(
     <MemoryRouter initialEntries={['/add-token']}>
         <Routes>

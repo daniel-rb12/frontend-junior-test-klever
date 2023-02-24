@@ -17,7 +17,7 @@ function AddToken() {
       setIsDisabled(true);
     };
 
-  }, [token, balance])
+  }, [token, balance]);
 
   const handleClickSave = () => {
     const tokenForLocalStorage = JSON.parse(localStorage.getItem('tokens') || '[]');

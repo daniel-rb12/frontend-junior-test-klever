@@ -23,7 +23,7 @@ describe('Test home page and token component', () => {
     global.fetch.mockClear();
   });
 
-  it('tests local storage', async () => {
+  it('tests local storage', () => {
     render(
       <MemoryRouter initialEntries={['/']}>
         <Routes>
@@ -43,7 +43,7 @@ describe('Test home page and token component', () => {
     expect(tokenStorage2).toEqual([]);
   });
 
-  it('test if spans are on the page', async () => {
+  it('test if spans are on the page', () => {
     render(
       <MemoryRouter initialEntries={['/']}>
         <Routes>
@@ -59,7 +59,7 @@ describe('Test home page and token component', () => {
     expect(balanceSpan).toBeInTheDocument();
   });
 
-  it('tests that all elements are being rendered', async () => {
+  it('tests that all elements are being rendered', () => {
     render(
       <MemoryRouter initialEntries={['/']}>
         <Routes>

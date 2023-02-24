@@ -115,7 +115,8 @@ describe('Test home page and token component', () => {
     expect(history.location.pathname).toBe("/");
   });
 
-  it('tests th', async () => {
+  it(`tests whether the user receives an alert when 
+    trying to add a token with an existing name`, async () => {
     const setLocalStorage = (id, data) => {
         window.localStorage.setItem(id, JSON.stringify(data));
         return data;
