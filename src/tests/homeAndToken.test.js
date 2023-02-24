@@ -1,7 +1,6 @@
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
-import { createMemoryHistory } from 'history';
 import App from '../App';
 import userEvent from '@testing-library/user-event';
 import EditToken from '../Pages/EditToken';

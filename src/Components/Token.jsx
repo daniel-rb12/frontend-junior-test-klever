@@ -16,7 +16,7 @@ function Token({ token, balance, ind }) {
     <div className="token-component-container">
       <div className='name-and-edit-container'>
         <button
-          data-testid="icon"
+          data-testid={ `icon${ ind }` }
           id="edit-icon-button"
           type="button"
           onClick={ () => saveIndexAndRedirect(ind) }

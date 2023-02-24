@@ -126,7 +126,7 @@ describe('Test Add Token page', () => {
   userEvent.click(saveButton);
 
   expect(alertSpy).toHaveBeenCalledWith('This token already exists,' + 
-  ' choose another name please.');
+    ' choose another name please.');
   });
 
   it(`tests regex validator`, async () => {
