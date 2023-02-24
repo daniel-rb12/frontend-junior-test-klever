@@ -80,7 +80,7 @@ describe('Test Add Token page', () => {
       </MemoryRouter>
     );
 
-    window.localStorage.clear()
+    window.localStorage.clear();
 
     const tokenInput = screen.getByRole('textbox', {  name: /token/i});
     const balanceInput = screen.getByRole('textbox', {  name: /balance/i});
