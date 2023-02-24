@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/frontend-junior-test-klever/static/css/main.dbea062d.css",
-    "main.js": "/frontend-junior-test-klever/static/js/main.56ea474c.js",
+    "main.js": "/frontend-junior-test-klever/static/js/main.f4a352e5.js",
     "static/media/shooting-star.svg": "/frontend-junior-test-klever/static/media/shooting-star.17c9df4afc85d2c7e861ed49e5482cf6.svg",
     "static/media/logo.svg": "/frontend-junior-test-klever/static/media/logo.e508030155275995c5f38fe7de486727.svg",
     "index.html": "/frontend-junior-test-klever/index.html",
     "main.dbea062d.css.map": "/frontend-junior-test-klever/static/css/main.dbea062d.css.map",
-    "main.56ea474c.js.map": "/frontend-junior-test-klever/static/js/main.56ea474c.js.map"
+    "main.f4a352e5.js.map": "/frontend-junior-test-klever/static/js/main.f4a352e5.js.map"
   },
   "entrypoints": [
     "static/css/main.dbea062d.css",
-    "static/js/main.56ea474c.js"
+    "static/js/main.f4a352e5.js"
   ]
 }
