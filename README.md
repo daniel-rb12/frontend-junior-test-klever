@@ -12,6 +12,13 @@ Visando o controle de qualidade do produto, foram desenvolvidos testes unitário
 garantia das funcionalidades da aplicação.
 Foi utilizado CSS "puro" na estilização do projeto.
 
+## Tecnologias utilizadas
+
+* REACT
+* CSS
+* JEST
+* REACT TESTING LIBRARY
+
 ## Instalação do projeto
 
 Não é necessária a instalação da aplicação para vê-la funcionar, você pode acessar este [link](https://daniel-rb12.github.io/frontend-junior-test-klever/) para utilizá-la.
