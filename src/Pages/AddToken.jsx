@@ -49,7 +49,12 @@ function AddToken() {
       <Header />
       <div className="add-token-container">
         <div className="add-top-container">
-          <span id="add-span">Add Token</span>
+          <span
+            id="add-span"
+            data-testid='add-span'
+          >
+            Add Token
+          </span>
           <button
             id="back-button"
             type="button"
