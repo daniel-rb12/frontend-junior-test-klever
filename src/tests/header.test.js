@@ -1,12 +1,10 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import App from "../App";
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import EditToken from '../Pages/EditToken';
-import userEvent from '@testing-library/user-event';
 import { act } from 'react-dom/test-utils';
 import { createMemoryHistory } from 'history';
-import Header from '../Components/Header';
 import AddToken from '../Pages/AddToken';
 
 describe('Test Header component', () => {
@@ -27,7 +25,8 @@ describe('Test Header component', () => {
     global.fetch.mockClear();
   });
 
-  test('Tests if the header element appears in all routes', async () => {
+  test(`Tests if the header element appears in all routes
+    and the targeting of the add token button`, async () => {
     const history = createMemoryHistory();
     render(
       <MemoryRouter initialEntries={['/']}>
