@@ -70,7 +70,7 @@ describe('Test home page and token component', () => {
     
     const tokenName = screen.getByText(/klv/i);
     const balanceValue = screen.getByText(/10,000\.00/i);
-    const icon = screen.getByTestId('icon');
+    const icon = screen.getByTestId('icon0');
 
     expect(tokenName).toBeInTheDocument();
     expect(balanceValue).toBeInTheDocument();
@@ -87,7 +87,7 @@ describe('Test home page and token component', () => {
       </MemoryRouter>
     );
     
-    const icon = screen.getByTestId('icon');
+    const icon = screen.getByTestId('icon0');
 
     userEvent.click(icon);
 
