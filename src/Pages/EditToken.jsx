@@ -64,7 +64,7 @@ function EditToken() {
 
   return (
     <div>
-      <Header />
+      <Header add={ false } />
       <div className="edit-token-container">
         <div className="edit-top-container">
           <span id="edit-span">Edit Token</span>

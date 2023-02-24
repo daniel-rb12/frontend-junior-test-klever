@@ -1,14 +1,11 @@
-import { createBrowserHistory } from '@remix-run/router';
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import KleverLogo from '../assets/logo.svg'
 import Star from '../assets/shooting-star.svg'
 import '../CSS/header.css'
 
-function Header() {
-  const history = createBrowserHistory();
+function Header({ add }) {
   const navigate = useNavigate();
-  const locate = history.location.pathname;
   return (
     <header>
         <div className="klever-logo-container">
@@ -20,7 +17,7 @@ function Header() {
             <span id="wish-span">Wish Wallet</span>
           </div>
           <div>
-          { locate === "/" && 
+          { add === true && 
               <button 
               id="add-button"
               type="button"

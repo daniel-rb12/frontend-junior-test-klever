@@ -46,7 +46,7 @@ function AddToken() {
 
   return (
     <div>
-      <Header />
+      <Header add={ false } />
       <div className="add-token-container">
         <div className="add-top-container">
           <span

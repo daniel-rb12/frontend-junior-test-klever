@@ -8,7 +8,7 @@ function Home() {
 
   return (
     <div>
-      <Header />
+      <Header add={ true } />
       <div className="span-token-container">
         <span id="token-span">Tokens</span>
         <span id="balance-span">Balance</span>
