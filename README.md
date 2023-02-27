@@ -15,6 +15,7 @@ Foi utilizado CSS "puro" na estilização do projeto.
 ## Tecnologias utilizadas
 
 * REACT
+* HTML
 * CSS
 * JEST
 * REACT TESTING LIBRARY
